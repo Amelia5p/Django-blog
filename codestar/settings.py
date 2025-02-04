@@ -89,6 +89,11 @@ DATABASES = {
     'default': dj_database_url.parse("postgresql://neondb_owner:npg_GORIjhD2wtB9@ep-damp-grass-a2dmbpz2.eu-central-1.aws.neon.tech/mumbo_saint_decoy_662814")
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeinstitute-ide.net/",
+    "https://*.herokuapp.com"
+]
+
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
