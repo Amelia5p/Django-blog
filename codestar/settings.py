@@ -24,12 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = ('SECRET_KEY')
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-amelia5p-djangoblog-zeqborngcvd.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-amelia5p-djangoblog-9o46wodnwtn.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 
 # Application definition
@@ -88,7 +90,6 @@ WSGI_APPLICATION = 'codestar.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse("postgresql://neondb_owner:npg_GORIjhD2wtB9@ep-damp-grass-a2dmbpz2.eu-central-1.aws.neon.tech/mumbo_saint_decoy_662814")
 }
-
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "https://*.herokuapp.com"
