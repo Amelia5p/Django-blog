@@ -15,6 +15,10 @@ import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -29,7 +33,7 @@ SECRET_KEY = ('SECRET_KEY')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
@@ -116,7 +120,12 @@ CSRF_TRUSTED_ORIGINS = [
     "https://localhost",
     "https://*.herokuapp.com"
 ]
-
+# cloudinary setting
+cloudinary.config(
+   cloud_name="dbv6ryfbc",
+   api_key="292637775361271",
+   api_secret="KNinSiLGT7ZJlhyQ9xjRIjPbSwE"
+)
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
